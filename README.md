@@ -12,33 +12,6 @@ A production-style Enterprise Agentic RAG platform for organizational knowledge 
 - JWT auth, role-based access, resumable conversations, feedback, analytics, and evaluation report scaffolding.
 - Docker Compose stack for PostgreSQL, ChromaDB, Ollama, backend, and frontend.
 
-## Quick Start
-
-1. Copy `.env.example` to `.env` and set `TAVILY_API_KEY`.
-2. Start the stack:
-
-```powershell
-docker compose up --build
-```
-
-3. Pull the Llama 3 model if your Ollama volume does not already have it:
-
-```powershell
-docker compose exec ollama ollama pull llama3
-```
-
-4. Open the app at `http://localhost:5173`.
-5. Register the first account. The first registered account becomes an admin.
-
-Backend API docs are available at `http://localhost:8000/docs`.
-
-## Local Checks
-
-```powershell
-./scripts/check.ps1
-```
-
-This runs backend tests and the frontend production build.
 
 ## Project Layout
 
@@ -57,7 +30,3 @@ frontend/src
 docs/           architecture, API, deployment notes
 ```
 
-## Notes
-
-- This repository is ready to be initialized and pushed to GitHub with `git init`, `git add .`, and your normal remote workflow.
-- Demo video recording is an external deliverable; the app and docs are structured so a demo can show upload, indexing, chat, citations, feedback, and analytics.
